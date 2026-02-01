@@ -12,32 +12,19 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:size=12", "SymbolsNerdFont:size=12" };
 static const char dmenufont[]       = "JetBrains Mono:size=12";
-/*
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-static const char *colors[][3]      = {
-*/
-	/*               fg         bg         border   */
-/*
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-};
-*/
-static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#FBF1C7";
-static const char col_gray3[]       = "#e2d3ba";
-static const char col_gray4[]       = "#D5C4A1";
-static const char col_black[]       = "#1D2021";
-static const char col_cyan[]        = "#d8a657"; // not used currently
-static const char col_blue[]        = "#e78a4e"; // orange
+
+// Everforest
+static const char normbgcolor[]     = "#2f383e";
+static const char normbordercolor[] = "#868d80";
+static const char normfgcolor[]     = "#d8caac";
+static const char selfgcolor[]      = "#2f383e";
+static const char selbgcolor[]      = "#a7c080";
+static const char selbordercolor[]  = "#a7c080";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_black, col_blue,  col_blue  }, 
-   //[SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
+	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
+	[SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 
 /* tagging */
@@ -95,7 +82,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_blue, "-sf", col_black, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
