@@ -94,8 +94,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
-static const char *upbrightness[]   = { "xbacklight", "-inc", "10", NULL };
-static const char *downbrightness[] = { "xbacklight", "-dec", "10", NULL };
+static const char *upbrightness[]   = { "brightnessctl", "set", "10%+", NULL };
+static const char *downbrightness[] = { "brightnessctl", "set", "10%-", NULL };
 
 #include <X11/XF86keysym.h>
 
