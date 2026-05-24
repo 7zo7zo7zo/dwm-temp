@@ -10,16 +10,18 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono:size=12", "SymbolsNerdFont:size=12" };
-static const char dmenufont[]       = "JetBrains Mono:size=12";
+static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=12" };
+static const char dmenufont[]       = "JetBrains Mono Nerd Font:size=12";
 
 // Everforest
+/*
 static const char normbgcolor[]     = "#2f383e";
 static const char normbordercolor[] = "#868d80";
 static const char normfgcolor[]     = "#d8caac";
 static const char selfgcolor[]      = "#2f383e";
 static const char selbgcolor[]      = "#a7c080";
 static const char selbordercolor[]  = "#a7c080";
+*/
 
 static const char col_kanagawa[]    = "#090618";
 static const char col_kanagawa1[]   = "#FFA066";
@@ -112,6 +114,8 @@ static const Key keys[] = {
 	{ 0, XF86XK_AudioPrev,                     spawn,          {.v = medprevcmd } },
 	{ 0, XF86XK_MonBrightnessUp,			   spawn,          {.v = upbrightness } },
 	{ 0, XF86XK_MonBrightnessDown,			   spawn,          {.v = downbrightness } },
+	{ MODKEY,				XK_F1,     spawn,       SHCMD("screenshot") },
+	//{ MODKEY|ShiftMask,		XK_F1,     spawn,       SHCMD("screenshot color") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
