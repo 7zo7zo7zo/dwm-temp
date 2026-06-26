@@ -116,7 +116,7 @@ static const Key keys[] = {
 	{ 0, XF86XK_MonBrightnessDown,             spawn,          {.v = downbrightness } },
 	{ MODKEY,                       XK_F1,     spawn,          SHCMD("screenshot") },
 	//{ MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("screenshot color") },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("$TERMINAL -e xdg-open $HOME") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("$TERMINAL -e f $HOME") },
 	//{ MODKEY,                       XK_e,      spawn,          SHCMD("xdg-terminal-exec xdg-open $HOME") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
