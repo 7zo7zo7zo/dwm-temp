@@ -118,7 +118,7 @@ static const Key keys[] = {
 	//{ MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("screenshot color") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("$TERMINAL -e f $HOME") },
 	//{ MODKEY,                       XK_e,      spawn,          SHCMD("xdg-terminal-exec xdg-open $HOME") },
-	{ MODKEY,                       XK_a,      spawn,          SHCMD("$HOME/nixos-config/scripts/repos-dmenu") },
+	{ MODKEY,                       XK_grave,  spawn,          SHCMD("$HOME/nixos-config/scripts/repos-dmenu") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
