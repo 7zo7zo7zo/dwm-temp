@@ -7,7 +7,6 @@
     { nixpkgs, ... }:
     let
       inherit (nixpkgs) lib;
-
       systems = lib.intersectLists lib.systems.flakeExposed lib.platforms.linux;
       forAllSystems = lib.genAttrs systems;
 
